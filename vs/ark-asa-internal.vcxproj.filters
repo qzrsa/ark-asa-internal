@@ -51,6 +51,18 @@
     <ClCompile Include="..\vendor\minhook\src\hde\hde64.c">
       <Filter>ark-asa-internal\vendor\minhook\src\hde</Filter>
     </ClCompile>
+    <ClCompile Include="..\vendor\CppSDK\SDK\Basic.cpp">
+      <Filter>ark-asa-internal\vendor\CppSDK\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\CppSDK\SDK\CoreUObject_functions.cpp">
+      <Filter>ark-asa-internal\vendor\CppSDK\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\CppSDK\SDK\Engine_functions.cpp">
+      <Filter>ark-asa-internal\vendor\CppSDK\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\CppSDK\SDK\ShooterGame_functions.cpp">
+      <Filter>ark-asa-internal\vendor\CppSDK\SDK</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\ZeroGUI.h">

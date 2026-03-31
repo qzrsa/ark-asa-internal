@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../vendor/CppSDK/SDK/Engine_classes.hpp"
-#include "../vendor/CppSDK/SDK/Engine_functions.cpp"
 
 #include <Windows.h>
 

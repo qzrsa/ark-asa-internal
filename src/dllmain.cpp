@@ -1,15 +1,12 @@
 #include "../vendor/minhook/include/MinHook.h"
+
 #include "../vendor/AOBScan/AOBScan.hpp"
 
-#include "../vendor/CppSDK/SDK/Basic.cpp"
-#include "../vendor/CppSDK/SDK/CoreUObject_functions.cpp"
-#include "../vendor/CppSDK/SDK/DeathItemCache_classes.hpp"
-
 #include "../vendor/CppSDK/SDK/Engine_classes.hpp"
-#include "../vendor/CppSDK/SDK/Engine_functions.cpp"
 
 #include "../vendor/CppSDK/SDK/ShooterGame_classes.hpp"
-#include "../vendor/CppSDK/SDK/ShooterGame_functions.cpp"
+
+#include "../vendor/CppSDK/SDK/DeathItemCache_classes.hpp"
 
 #include "ZeroGUI.h"
 

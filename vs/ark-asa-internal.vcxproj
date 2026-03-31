@@ -20,6 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\dllmain.cpp" />
+    <ClCompile Include="..\vendor\CppSDK\SDK\Basic.cpp" />
+    <ClCompile Include="..\vendor\CppSDK\SDK\CoreUObject_functions.cpp" />
+    <ClCompile Include="..\vendor\CppSDK\SDK\Engine_functions.cpp" />
+    <ClCompile Include="..\vendor\CppSDK\SDK\ShooterGame_functions.cpp" />
     <ClCompile Include="..\vendor\minhook\src\buffer.c" />
     <ClCompile Include="..\vendor\minhook\src\hde\hde32.c" />
     <ClCompile Include="..\vendor\minhook\src\hde\hde64.c" />
@@ -62,13 +66,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -131,7 +135,7 @@
       <PreprocessorDefinitions>_DEBUG;ARKASAINTERNAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
