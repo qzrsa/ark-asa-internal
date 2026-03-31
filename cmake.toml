@@ -31,7 +31,6 @@ msvc.compile-options = [
     "/GL",
 
     "/fp:fast",
-    "/favor:INTEL64",
     "/Zc:inline",
     "/MT",
 ]
