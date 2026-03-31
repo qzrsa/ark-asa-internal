@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ark-asa-internal">
+      <UniqueIdentifier>{288c5e2c-db13-4d35-afc2-e3b676752cd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ark-asa-internal\vendor">
+      <UniqueIdentifier>{eba26603-f2ff-401e-b844-c259ffb908da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ark-asa-internal\vendor\minhook">
+      <UniqueIdentifier>{2f2c5bb8-4a4b-40bc-8cef-1d073394d27f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ark-asa-internal\vendor\minhook\include">
+      <UniqueIdentifier>{20c43126-7cb6-4e4d-a895-31a5766c19ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ark-asa-internal\vendor\minhook\src">
+      <UniqueIdentifier>{57f6e3dd-1d7b-4424-868c-eae070697536}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ark-asa-internal\vendor\minhook\src\hde">
+      <UniqueIdentifier>{6c1609a1-64e5-4905-9a05-8606e3ecb0e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ark-asa-internal\src">
+      <UniqueIdentifier>{27fc7122-80eb-4c2f-a23b-7b59ff3b70d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ark-asa-internal\vendor\CppSDK">
+      <UniqueIdentifier>{0bffcae4-e71a-4091-a32e-8072d4e7ebb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ark-asa-internal\vendor\CppSDK\SDK">
+      <UniqueIdentifier>{0dfaf019-768d-4743-91e6-77a9dbc06aa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ark-asa-internal\vendor\AOBScan">
+      <UniqueIdentifier>{fe878d63-8a32-49b6-9ecd-0214ddff84cf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\dllmain.cpp">
+      <Filter>ark-asa-internal\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\minhook\src\buffer.c">
+      <Filter>ark-asa-internal\vendor\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\minhook\src\hook.c">
+      <Filter>ark-asa-internal\vendor\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\minhook\src\trampoline.c">
+      <Filter>ark-asa-internal\vendor\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\minhook\src\hde\hde32.c">
+      <Filter>ark-asa-internal\vendor\minhook\src\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\minhook\src\hde\hde64.c">
+      <Filter>ark-asa-internal\vendor\minhook\src\hde</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\ZeroGUI.h">
+      <Filter>ark-asa-internal\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\minhook\src\buffer.h">
+      <Filter>ark-asa-internal\vendor\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\minhook\src\trampoline.h">
+      <Filter>ark-asa-internal\vendor\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\minhook\src\hde\hde32.h">
+      <Filter>ark-asa-internal\vendor\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\minhook\src\hde\hde64.h">
+      <Filter>ark-asa-internal\vendor\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\minhook\src\hde\pstdint.h">
+      <Filter>ark-asa-internal\vendor\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\minhook\src\hde\table32.h">
+      <Filter>ark-asa-internal\vendor\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\minhook\src\hde\table64.h">
+      <Filter>ark-asa-internal\vendor\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\minhook\include\MinHook.h">
+      <Filter>ark-asa-internal\vendor\minhook\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\AOBScan\AOBScan.hpp">
+      <Filter>ark-asa-internal\vendor\AOBScan</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
