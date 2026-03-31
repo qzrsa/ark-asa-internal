@@ -1,9 +1,15 @@
 #include "../vendor/minhook/include/MinHook.h"
+#include "../vendor/AOBScan/AOBScan.hpp"
 
+#include "../vendor/CppSDK/SDK/Basic.cpp"
+#include "../vendor/CppSDK/SDK/CoreUObject_functions.cpp"
 #include "../vendor/CppSDK/SDK/DeathItemCache_classes.hpp"
+
 #include "../vendor/CppSDK/SDK/Engine_classes.hpp"
+#include "../vendor/CppSDK/SDK/Engine_functions.cpp"
 
 #include "../vendor/CppSDK/SDK/ShooterGame_classes.hpp"
+#include "../vendor/CppSDK/SDK/ShooterGame_functions.cpp"
 
 #include "ZeroGUI.h"
 
@@ -1117,6 +1123,43 @@ static bool Func::更新世界() {
 }
 
 static __forceinline void init() {
+    SDK::UEngine* engine = nullptr;
+    SDK::UGameViewportClient* viewport = nullptr;
+
+    do {
+        engine = SDK::UEngine::GetEngine();
+    } while (!engine);
+
+    do {
+        viewport = engine->GameViewport;
+    } while (!viewport);
+
+    do {
+        ZeroGUI::Font = (SDK::UFont*)SDK::UObject::FindObject("Font SansationBold18.SansationBold18");
+    } while (!ZeroGUI::Font);
+
+    void* p_post_render = nullptr;
+    // mov rax, [rcx] jmp [rax + offset] ... mov [rsp + offset], rbp mov [rsp + offset], rdi push r12 push r14
+    auto aob_results = AOB::Scan("48 8B 01 48 FF A0 ? ? ? ? ? ? ? ? ? ? 48 89 6C 24 ? 48 89 7C 24 ? 41 54 41 56");
+
+    if (aob_results && aob_results.size() > 0 && aob_results[0]) {
+        p_post_render = aob_results[0];
+    } else {
+        void** VTable = *(void***)viewport;
+        if (VTable)
+            p_post_render = VTable[122];
+    }
+
+    if (p_post_render) {
+        Var::dpi_scale = Func::get_dpi_scale();
+        MH_Initialize();
+        MH_CreateHook(p_post_render, reinterpret_cast<void*>(&hook_post_render), (LPVOID*)&original_post_render);
+        MH_EnableHook(p_post_render);
+    }
+}
+
+/*
+static __forceinline void init() {
     SDK::UEngine* engine;
     SDK::UGameViewportClient* viewport;
 
@@ -1145,6 +1188,7 @@ static __forceinline void init() {
     MH_CreateHook(p_post_render, reinterpret_cast<void*>(&hook_post_render), (LPVOID*)&original_post_render);
     MH_EnableHook(p_post_render);
 }
+*/
 
 BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved) {
     if (fdwReason == DLL_PROCESS_ATTACH) {
