@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="ark-asa-internal.vcxproj" Id="dae7c19b-0b27-425a-a354-a360a81a98f5" />
+</Solution>
